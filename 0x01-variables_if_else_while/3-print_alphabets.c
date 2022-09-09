@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-        int ascii_value;
+	int ascii_value;
 	int ascii_n_line;
 
 	ascii_value = 'a';
