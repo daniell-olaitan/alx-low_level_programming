@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char *quote = "with proper grammar, but the output is a piece of art, \n";
+	char *quote = "with proper grammar, but the outcome is a piece of art,\n";
 
 	printf("%s", quote);
 	return (0);
