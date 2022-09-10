@@ -26,6 +26,8 @@ int main(void)
 					putchar(digit_1);
 					putchar(digit_2);
 					putchar((int)' ');
+					putchar(digit_3);
+					putchar(digit_4);
 					if (digit_1 != '9' || digit_2 != '8' || digit_3 != '9' || digit_4 != '9')
 					{
 						putchar((int)',');
@@ -43,6 +45,8 @@ int main(void)
 
 		digit_1++;
 	}
+
+	putchar('\n');
 
 	return (0);
 }
