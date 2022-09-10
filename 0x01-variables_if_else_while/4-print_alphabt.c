@@ -16,7 +16,10 @@ int main(void)
 	while (ascii_value <= 'z')
 	{
 		if ((ascii_value == 'q') || (ascii_value == 'e'))
+		{
+			ascii_value++;
 			continue;
+		}
 
 		putchar(ascii_value++);
 	}
