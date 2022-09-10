@@ -12,7 +12,6 @@ int main(void)
 
 	while (first_digit <= '8')
 	{
-		putchar(first_digit);
 		second_digit = first_digit++;
 		while (second_digit <= '9')
 		{
