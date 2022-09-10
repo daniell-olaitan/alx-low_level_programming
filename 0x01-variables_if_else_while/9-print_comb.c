@@ -3,7 +3,7 @@
 /**
  * main - entry point
  *Description: prints comma separated digits of decimal
- *Return 0, if successful
+ *Return: 0, if successful
  */
 int main(void)
 {
@@ -11,12 +11,14 @@ int main(void)
 
 	while (digit <= '9')
 	{
-		putchar(digit++);
+		putchar(digit);
 		if (digit != '9')
 		{
 			putchar((int)',');
 			putchar((int)' ');
 		}
+
+		digit++;
 	}
 
 	putchar((int)'\n');
