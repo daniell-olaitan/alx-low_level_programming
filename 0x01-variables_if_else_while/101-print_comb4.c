@@ -9,7 +9,7 @@ int main(void)
 {
 	int first_digit = '0';
 	int second_digit;
-	int thrid_digit;
+	int third_digit;
 
 	while (first_digit <= '8')
 	{
