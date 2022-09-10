@@ -16,6 +16,7 @@ int main(void)
 		second_digit = first_digit++;
 		while (second_digit <= '9')
 		{
+			putchar(first_digit);
 			putchar(second_digit);
 			if (first_digit != '8' && second_digit != '9')
 			{
@@ -28,6 +29,8 @@ int main(void)
 
 		first_digit++;
 	}
+
+	putchar((int)'\n');
 
 	return (0);
 }
