@@ -29,5 +29,7 @@ int main(void)
 		first_digit++;
 	}
 
+	putchar((int)'\n');
+
 	return (0);
 }
