@@ -7,12 +7,11 @@
  */
 int main(void)
 {
-	int digit_1;
 	int digit_2;
 	int digit_3;
 	int digit_4;
 
-	for (digit_1 = '0'; digit_1 <= '9'; ++digit_1)
+	for (int digit_1 = '0'; digit_1 <= '9'; ++digit_1)
 	{
 		for (digit_2 = '0'; digit_2 <= '9'; ++digit_2)
 		{
