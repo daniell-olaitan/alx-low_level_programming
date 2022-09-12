@@ -7,21 +7,30 @@
  */
 int main(void)
 {
-	int digit_1 = '0';
+	int digit_1;
 	int digit_2;
 	int digit_3;
 	int digit_4;
 
-	while (digit_1 <= '9')
+	for (digit_1 = '0'; digit_1 <= '9'; ++digit_1)
 	{
-		digit_2 = '0';
-		while (digit_2 <= '9')
+		for (digit_2 = '0'; digit_2 <= '9'; ++digit_2)
 		{
-			digit_3 = digit_2;
-			while (digit_3 <= '9')
+			if (digit_2 == '9')
 			{
+				digit_3 = digit_1 + 1;
+				digit_4 = '0';
+			}
+			else
+			{
+				digit_3 = digit_1;
 				digit_4 = digit_2 + 1;
-				while (digit_4 <= '9')
+			}
+			for (; digit_3 <= '9'; ++digit_3)
+			{
+				if (digit_4 > '9')
+					digit_4 = '0';
+				for (; digit_4 <= '9'; ++digit_4)
 				{
 					putchar(digit_1);
 					putchar(digit_2);
@@ -33,20 +42,10 @@ int main(void)
 						putchar((int)',');
 						putchar((int)' ');
 					}
-
-					digit_4++;
 				}
-
-				digit_3++;
 			}
-
-			digit_2++;
 		}
-
-		digit_1++;
 	}
-
 	putchar('\n');
-
 	return (0);
 }
