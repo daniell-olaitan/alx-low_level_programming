@@ -62,7 +62,7 @@ int main(void)
 	{
 		for (digit_2 = '0'; digit_2 <= '9'; ++digit_2)
 		{
-			set_digits(digit_1, digit_2, digit_3, digit_4);
+			set_digits(digit_1, digit_2, &digit_3, &digit_4);
 			for (; digit_3 <= '9'; ++digit_3)
 			{
 				if (digit_4 > '9')
