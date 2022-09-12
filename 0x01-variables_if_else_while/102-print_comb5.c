@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * print_digits - prints digits on stdio stream
+ * print_number - prints digits on stdio stream
  *@d1: first digit to be printed
  *@d2: 2nd digit to be printed
  *@d3: 3rd digit to be printed
