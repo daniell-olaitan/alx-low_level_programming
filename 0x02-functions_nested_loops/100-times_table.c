@@ -45,7 +45,7 @@ void print_times_table(int n)
 	{
 		if (n > 15)
 			break;
-		
+
 		for (j = 0; j <= n; ++j)
 		{
 			mul = i * j;
