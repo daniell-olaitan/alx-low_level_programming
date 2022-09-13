@@ -14,7 +14,7 @@ void print_digits(int n)
 		_putchar(' ');
 		_putchar(n + '0');
 	}
-	else if (m < 100)
+	else if (n < 100)
 	{
 		_putchar(' ');
 		_putchar(' ');
