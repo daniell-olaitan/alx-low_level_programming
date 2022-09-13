@@ -50,9 +50,9 @@ void print_times_table(int n)
 				_putchar(mul + '0');
 			else
 				print_digits(mul);
-			if (j == 9)
+			if (j == n)
 				_putchar('\n');
-			else
+			else if (n != 0)
 				_putchar(',');
 		}
 	}
