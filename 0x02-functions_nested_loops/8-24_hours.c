@@ -19,7 +19,7 @@ void jack_bauer(void)
 
 			for (h3 = '0'; h3 < '6'; ++h3)
 			{
-				for (h4 = '0'; h4 <= '9')
+				for (h4 = '0'; h4 <= '9'; ++h4)
 				{
 					_putchar(h1);
 					_putchar(h2);
