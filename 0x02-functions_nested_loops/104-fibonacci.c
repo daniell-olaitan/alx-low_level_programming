@@ -13,13 +13,13 @@ int main(void)
 	unsigned long n2 = 2;
 
 	printf("1, 2, ");
-	for (i = 0; i <= 96; ++i)
+	for (i = 0; i <= 95; ++i)
 	{
 		tmp = n1 + n2;
 		n1 = n2;
 		n2 = tmp;
 		printf("%ld", tmp);
-		if (i < 96)
+		if (i < 95)
 			printf(", ");
 	}
 
