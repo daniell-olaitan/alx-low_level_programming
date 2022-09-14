@@ -13,7 +13,7 @@ int main(void)
 	unsigned long n2 = 2;
 	unsigned long sum = 2;
 
-	for (tmp <= 4000000)
+	while (tmp <= 4000000)
 	{
 		tmp = n1 + n2;
 		n1 = n2;
