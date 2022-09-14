@@ -34,7 +34,7 @@ int main(void)
 		tmp_b = b1 + b2 - carry * 1000;
 		b1 = b2;
 		b2 = tmp_b;
-		if (tmp >= 100)
+		if (tmp_b >= 100)
 			printf("%lu%lu", tmp, tmp_b);
 		else
 			printf("%lu0%lu", tmp, tmp_b);
