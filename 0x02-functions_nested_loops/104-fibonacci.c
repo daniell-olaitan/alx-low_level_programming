@@ -8,9 +8,9 @@
 int main(void)
 {
 	int i;
-	unsigned long tmp;
-	unsigned long n1 = 1;
-	unsigned long n2 = 2;
+	long long tmp;
+	long long n1 = 1;
+	long long n2 = 2;
 
 	printf("1, 2, ");
 	for (i = 0; i <= 95; ++i)
