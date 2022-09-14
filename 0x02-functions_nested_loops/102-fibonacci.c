@@ -16,9 +16,9 @@ int main(void)
 	for (i = 0; i <= 48; ++i)
 	{
 		tmp = n1 + n2;
-		1 = n2;
+		n1 = n2;
 		n2 = tmp;
-		printf("%d", tmp);
+		printf("%ld", tmp);
 		if (i < 48)
 			printf(", ");
 	}
