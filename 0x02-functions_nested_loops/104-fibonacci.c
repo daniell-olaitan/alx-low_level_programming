@@ -19,9 +19,8 @@ int main(void)
 		tmp = n1 + n2;
 		n1 = n2;
 		n2 = tmp;
-		printf("%lu ", tmp);
+		printf("%lu, ", tmp);
 	}
-
 	b1 = n1 % 1000;
 	n1 = n1 / 1000;
 	b2 = n2 % 1000;
@@ -39,13 +38,11 @@ int main(void)
 			printf("%lu%lu", tmp, tmp_b);
 		else
 			printf("%lu0%lu", tmp, tmp_b);
-
 		if (i != 98)
 			printf(", ");
 
 		i++;
 	}
-
 	printf("\n");
 	return (0);
 }
