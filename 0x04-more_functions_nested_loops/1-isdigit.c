@@ -6,7 +6,7 @@
  *
  * Return: 1 if true, otherwise 0
  */
-int _isalpha(int c)
+int _isdigit(int c)
 {
 	char ch = c;
 
