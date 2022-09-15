@@ -2,7 +2,7 @@
 
 /**
  * print_line - draws a straight line on the stdout
- *
+ * @n: number of short lines to be printed
  */
 void print_line(int n)
 {
