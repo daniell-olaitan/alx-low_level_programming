@@ -10,7 +10,7 @@ int _isdigit(int c)
 {
 	char ch = c;
 
-	if (c >= '0' && c <= '9')
+	if (ch >= '0' && ch <= '9')
 		return (1);
 
 	return (0);
