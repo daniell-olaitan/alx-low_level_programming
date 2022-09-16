@@ -31,8 +31,8 @@ int isprime(unsigned long n)
  */
 int main(void)
 {
-	unsigned long n = 612852475143;
-	long div = 2;
+	unsigned long n = 612852475143UL;
+	long div = 2L;
 
 	while(1)
 	{
