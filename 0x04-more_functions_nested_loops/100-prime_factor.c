@@ -1,57 +1,21 @@
 #include <stdio.h>
 
 /**
- * isprime - checks if a number is a prime number
- * @n: the number to be checked
- *
- * Return: 1 if number is a prime number, 0 otherwise
- */
-int isprime(unsigned long n)
-{
-	int i;
-
-	if (n <= 1)
-		return (0);
-
-	i = 2;
-	while (i * i <= n)
-	{
-		if (n % i == 0)
-			return (0);
-
-		i++;
-	}
-
-	return (1);
-}
-
-/**
- * main - prints the largest prime factor of a number
- * Return: Always 0
+ * main - calculate largest prime factor
+ * Return: 0 always
  */
 int main(void)
 {
-	long long n = 612852475143LL;
-	long div = 2L;
+	long int n = 612852475143;
+	long int i;
 
-	while (1)
+	for (i = 2; i <= n; ++i)
 	{
-		if (n % div == 0)
-		{
-			n = n / div;
-			if (isprime(n))
-				break;
-		}
-		else
-		{
-			while (1)
-			{
-				div++;
-				if (isprime(div))
-					break;
-			}
-		}
+		if (n % i == 0)
+			n = n / i;
+
 	}
 
-	printf("%llu\n", n);
+	printf("%ld\n", i);
+	return (0);
 }
