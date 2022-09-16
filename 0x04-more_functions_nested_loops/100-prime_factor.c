@@ -31,7 +31,7 @@ int isprime(unsigned long n)
  */
 int main(void)
 {
-	unsigned long n = 612852475143UL;
+	long long n = 612852475143LL;
 	long div = 2L;
 
 	while (1)
@@ -39,7 +39,7 @@ int main(void)
 		if (n % div == 0)
 		{
 			n = n / div;
-			if (n == 1)
+			if (isprime(n))
 				break;
 		}
 		else
@@ -53,5 +53,5 @@ int main(void)
 		}
 	}
 
-	printf("%ld\n", div);
+	printf("%llu\n", n);
 }
