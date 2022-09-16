@@ -34,7 +34,7 @@ int main(void)
 	unsigned long n = 612852475143UL;
 	long div = 2L;
 
-	while(1)
+	while (1)
 	{
 		if (n % div == 0)
 		{
