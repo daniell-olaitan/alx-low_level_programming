@@ -17,20 +17,17 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 		{
-			if (num)
-				break;
-
 			sign *= -1;
 		}
 
-		else if (s[i] >= '0' && s[i] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (!num)
+			if (num == 1)
 				integer = (sign * integer * 10) + (s[i] - '0');
 			else
 				integer = integer * 10 + (s[i] - '0');
 
-			num = 1;
+			num++;
 		}
 
 		else
