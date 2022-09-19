@@ -7,8 +7,14 @@
  *
  * Return: the destination
  */
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char dest[], char *src)
 {
-	dest = src;
+	int i;
+	int len = _strlen(s);
+
+	for (i = 0; src[i]; ++i)
+		dest[i] = src[i];
+
+	dest[i] = '\0';
 	return (dest);
 }
