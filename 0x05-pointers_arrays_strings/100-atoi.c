@@ -22,12 +22,8 @@ int _atoi(char *s)
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (num == 1)
-				integer = (sign * integer * 10) + sign *  (s[i] - '0');
-			else
-				integer = integer * 10 + sign * (s[i] - '0');
-
-			num++;
+			integer = integer * 10 + sign * (s[i] - '0');
+			num = 1;
 		}
 
 		else
