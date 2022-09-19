@@ -22,20 +22,7 @@ int _atoi(char *s)
 	}
 
 	if (number_of_sign % 2 == 1)
-		_putchar('-');
+		return (-integer);
 
-	print_number(integer);
-}
-
-/**
- * print_number - prints the given integer
- * @n: the int to be printed
- *
- */
-void print_number(int n)
-{
-	if (n / 10)
-		print_number(n / 10);
-	else
-		_putchar((n % 10) + '0');
+	return (integer);
 }
