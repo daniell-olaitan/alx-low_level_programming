@@ -19,7 +19,7 @@ char *leet(char *str)
 		{
 			if (str[i] == alphas[j])
 			{
-				encode = code[j]
+				encode = code[j];
 				break;
 			}
 			else
