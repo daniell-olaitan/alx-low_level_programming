@@ -1,4 +1,4 @@
-#include
+#include "main.h"
 
 /**
  * cap_string - capitalizes a given string
@@ -11,16 +11,32 @@ char *cap_string(char *str)
 	int i = 0;
 	char separator[] = " \t\n,;.!?\"(){}";
 	int adder = 'A' - 'a';
+	int sep = 1;
 
 	while (str[i])
 	{
-		if (!item_in(separator, str[i]))
+		if (item_in(separator, str[i]))
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
+			sep = 1;
+		}
+		else if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			if (sep)
 				str[i] += adder;
+
+			sep = 0;
+		}
+		else if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			if (!sep)
+				str[i] -= adder;
+
+			sep = 0;
 		}
 		i++;
 	}
+
+	return (str);
 }
 
 /**
