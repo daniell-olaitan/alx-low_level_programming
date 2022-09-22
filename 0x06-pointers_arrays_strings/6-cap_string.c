@@ -37,7 +37,7 @@ char *cap_string(char *str)
 		{
 			sep = 0;
 		}
-		
+
 		i++;
 	}
 
