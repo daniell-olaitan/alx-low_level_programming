@@ -26,13 +26,6 @@ char *cap_string(char *str)
 
 			sep = 0;
 		}
-		else if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			if (!sep)
-				str[i] -= adder;
-
-			sep = 0;
-		}
 		else
 		{
 			sep = 0;
