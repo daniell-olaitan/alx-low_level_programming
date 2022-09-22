@@ -30,4 +30,5 @@ char *leet(char *str)
 
 		str[i] = encode;
 	}
+	return (str);
 }
