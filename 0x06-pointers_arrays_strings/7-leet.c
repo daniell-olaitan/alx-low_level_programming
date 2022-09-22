@@ -9,7 +9,6 @@
 char *leet(char *str)
 {
 	int i, j;
-	char encode;
 	char *alphas = "aeotlAEOTL";
 	char *code = "4307143071";
 
@@ -19,13 +18,9 @@ char *leet(char *str)
 		{
 			if (str[i] == alphas[j])
 			{
-				encode = code[j];
-				break;
+				str[i] = code[j];
 			}
-		       	encode = str[i];
 		}
-
-		str[i] = encode;
 	}
 	return (str);
 }
