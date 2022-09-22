@@ -22,10 +22,7 @@ char *leet(char *str)
 				encode = code[j];
 				break;
 			}
-			else
-			{
-				encode = str[i];
-			}
+		       	encode = str[i];
 		}
 
 		str[i] = encode;
