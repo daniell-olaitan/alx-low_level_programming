@@ -17,7 +17,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (size_r <= l1 + 1 || size_r <= l2 + 1)
 		return (0);
 	r[size_r] = '\0';
-	return (add_digits(n1, n2, r, size_r--));
+	return (add_digits(n1 + l1 - 1, n2 + l2 - 1, r, --size_r));
 }
 
 /**
@@ -31,36 +31,33 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
  */
 char *add_digits(char *n1, char *n2, char *r, int n)
 {
-	int i, j;
 	int result, carry = 0;
-	int l1 = _strlen(n1) - 1;
-	int l2 = _strlen(n2) - 1;
 
-	for (i = l1, j = l2; i >= 0 && j >= 0 && n >= 0; --i,  --j, --n)
+	for (; *n1 && *n2; --n1, --n2, --n)
 	{
-		result = (n1[i] - '0') + (n2[j] - '0');
+		result = (*n1 - '0') + (*n2 - '0');
 		result += carry;
 		carry = result / 10;
-		r[n] = (result % 10) + '0';
+		*(r + n) = (result % 10) + '0';
 	}
 
-	for (; i >= 0 && n >= 0; --i, --n)
+	for (; *n1; --n1, --n)
 	{
-		result = (n1[i] - '0') + carry;
+		result = (*n1 - '0') + carry;
 		carry = result / 10;
-		r[n] = (result % 10) + '0';
+		*(r + n) = (result % 10) + '0';
 	}
 
-	for (; j >= 0 && n >= 0; --j, --n)
+	for (; *n2; --n2, --n)
 	{
-		result = (n2[j] - '0') + carry;
+		result = (*n2 - '0') + carry;
 		carry = result / 10;
-		r[n] = (result % 10) + '0';
+		*(r + n) = (result % 10) + '0';
 	}
 
 	if (carry && n >= 0)
 	{
-		r[n] = carry + '0';
+		*(r + n) = carry + '0';
 		return (r + n);
 	}
 	else if (carry && n < 0)
