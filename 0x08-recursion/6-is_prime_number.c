@@ -9,11 +9,11 @@
  */
 int is_prime(int n, int div)
 {
-	if (div * div >= n)
-		return (1);
-
 	if (n % div == 0 || n < 2)
 		return (0);
+
+	if (div * div >= n)
+		return (1);
 
 	return (is_prime(n, div + 1));
 }
