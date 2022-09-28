@@ -12,7 +12,7 @@ int sqrt_sub(int n, int a)
 	if (a * a > n)
 		return (-1);
 
-	if (a * a == b)
+	if (a * a == n)
 		return (a);
 
 	return (sqrt_sub(n, a + 1));
