@@ -1,7 +1,7 @@
 #include "main.h"
 
 int palindrome(char *, int);
-int _strlen(char *);
+int _strlen(char *, int);
 
 /**
  * is_palindrome - determines if a string is a palindrome
@@ -12,9 +12,6 @@ int _strlen(char *);
 int is_palindrome(char *s)
 {
 	int len = _strlen(s, 0) - 1;
-
-	if (len < 2)
-		return (1);
 
 	return (palindrome(s, len));
 }
@@ -31,7 +28,7 @@ int palindrome(char *str, int l)
 	if (l < 2)
 		return (1);
 
-	if (*s == *(s + l) && palindrome(s + 1, l - 1))
+	if (*str == *(str + l) && palindrome(str + 1, l - 1))
 		return (1);
 
 	return (0);
