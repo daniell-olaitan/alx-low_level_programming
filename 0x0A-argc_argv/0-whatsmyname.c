@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 		argv[0]++;
 	}
 
+	(void) argc;
 	_putchar('\n');
 
 	return (0);
