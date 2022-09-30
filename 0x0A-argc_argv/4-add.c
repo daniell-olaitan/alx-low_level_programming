@@ -16,10 +16,9 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; ++i)
 		{
-			status = atoi(argc[i]);
+			status = atoi(argv[i]);
 			if (!status)
 				zero++;
-
 		}
 
 		if (argc - 1 == zero)
