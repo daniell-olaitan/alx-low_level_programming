@@ -17,36 +17,23 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; ++i)
 		{
 			status = atoi(argv[i]);
-			if (!status)
-				zero++;
-		}
-
-		if (!zero)
-		{
-			for (i = 1; i < argc; ++i)
+			if (status)
 			{
-				status = atoi(argv[i]);
-				if (status < 0)
-				{
-					printf("%d\n", 0);
-					return (0);
-				}
-
 				sum += status;
 			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 
-			printf("%d\n", sum);
-			return (0);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		printf("%d\n", sum);
 	}
 	else
 	{
-		printf("%d\n", 0);
-		return (0);
+		printf("0\n");
 	}
+
+	return (0);
 }
