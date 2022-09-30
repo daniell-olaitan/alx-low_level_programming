@@ -21,12 +21,7 @@ int main(int argc, char *argv[])
 				zero++;
 		}
 
-		if (argc - 1 == zero)
-		{
-			printf("%d\n", 0);
-			return (0);
-		}
-		else if (!zero)
+		if (!zero)
 		{
 			for (i = 1; i < argc; ++i)
 				sum += atoi(argv[i]);
