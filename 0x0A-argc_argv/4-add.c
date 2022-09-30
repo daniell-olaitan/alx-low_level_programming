@@ -24,10 +24,18 @@ int main(int argc, char *argv[])
 		if (!zero)
 		{
 			for (i = 1; i < argc; ++i)
-				sum += atoi(argv[i]);
+			{
+				status = atoi(argv[i]);
+				if (status < 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
 
-			printf("%d\n", sum);
-			return (0);
+				sum += atoi(argv[i]);
+				printf("%d\n", sum);
+				return (0);
+			}
 		}
 		else
 		{
