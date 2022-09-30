@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
 				status = atoi(argv[i]);
 				if (status < 0)
 				{
-					printf("Error\n");
-					return (1);
+					printf("%d\n", 0);
+					return (0);
 				}
 
 				sum += status;
