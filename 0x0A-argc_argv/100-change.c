@@ -10,8 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int min = 0;
-	int cents = atoi(argv[1]);
+	int i, min = 0;
+	int cents;
 	int cents_d[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
+		cents = atoi(argv[1]);
 		for (i = 0; i < 5 && cents > 0; ++i)
 		{
 			while (cents_d[i] <= cents)
