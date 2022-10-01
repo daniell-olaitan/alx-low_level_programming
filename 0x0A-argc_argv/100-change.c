@@ -20,13 +20,13 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	cents = atoi(argv[1]);
 	if (cents < 0)
 	{
 		printf("0\n");
 	}
 	else
 	{
-		cents = atoi(argv[1]);
 		for (i = 0; i < 5 && cents > 0; ++i)
 		{
 			while (cents_d[i] <= cents)
