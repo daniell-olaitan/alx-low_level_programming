@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			status = check(argv[i]);
 			if (!status)
 			{
-				sum += status;
+				sum += atoi(argv[i]);
 			}
 			else
 			{
