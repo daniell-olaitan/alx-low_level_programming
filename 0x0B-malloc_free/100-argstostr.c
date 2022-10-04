@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	argc = (int) ac;
-	size = argc;
+	size = argc + 1;
 	for (i = 0; i < argc; ++i)
 		size += _strlen(av[i]);
 
@@ -40,5 +40,6 @@ char *argstostr(int ac, char **av)
 		l++;
 	}
 
+	*(str + l) = '\0';
 	return (str);
 }
