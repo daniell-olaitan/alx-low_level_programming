@@ -1,6 +1,3 @@
-#include "main.h"
-#include "funcdef.h"
-
 /**
  * free_grid - frees previously allocated space for grid
  * @grid: pointer to the grid
