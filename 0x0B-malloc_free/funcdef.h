@@ -1,6 +1,10 @@
 #ifndef DEF_H
 #define DEF_H
 
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * _strlen - computes len of str
  * @str: the given str
@@ -17,3 +21,5 @@ unsigned int _strlen(char *str)
 
 	return (i);
 }
+
+#endif

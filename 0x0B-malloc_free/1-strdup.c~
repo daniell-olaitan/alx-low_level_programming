@@ -1,9 +1,0 @@
-#include "main.h"
-#include <stdlib.h>
-
-/**
- * _strdup - creates a memory space and cooies a string to the memory
- * @str: the string to be duplicated
- *
- * Return: pointer to the duplicated string
- */
