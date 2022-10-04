@@ -1,0 +1,23 @@
+#include "main.h"
+#include "funcdef.h"
+
+/**
+ * alloc_grid - constructs a pointer to a 2-dimentional array of ints
+ * @width: length of column
+ * @height: length of row
+ *
+ * Return: pointer to the array
+ */
+int **alloc_grid(int width, int height)
+{
+	unsigned int i = 0, j = 0;
+	int **rec;
+
+	if (width <= 0 || height <= 0)
+	{
+		return (NULL);
+	}
+
+	else
+	{
+		
