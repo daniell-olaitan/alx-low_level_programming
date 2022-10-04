@@ -15,9 +15,12 @@ unsigned int _strlen(char *str)
 {
 	unsigned int i;
 
-	for (i = 0; str && *str; ++i)
+	if (str)
 	{
-		str++;
+		for (i = 0; *str; ++i)
+		{
+			str++;
+		}
 	}
 
 	return (i);
