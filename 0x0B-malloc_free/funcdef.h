@@ -1,9 +1,8 @@
 #ifndef DEF_H
 #define DEF_H
-
+#include <stdlib.h>
 #include <stddef.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * _strlen - computes len of str
