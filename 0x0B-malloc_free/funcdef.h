@@ -13,7 +13,7 @@
  */
 unsigned int _strlen(char *str)
 {
-	unsigned int i;
+	unsigned int i = 0;
 
 	if (str)
 	{

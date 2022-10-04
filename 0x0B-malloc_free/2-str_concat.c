@@ -18,14 +18,20 @@ char *str_concat(char *s1, char *s2)
 
 	if (str)
 	{
-		for (i = 0; s1[i]; ++i)
+		if (s1)
 		{
-			*(str + i) = *(s1 + i);
+			for (i = 0; s1[i]; ++i)
+			{
+				*(str + i) = *(s1 + i);
+			}
 		}
 
-		for (j = 0; s2[j]; ++j, ++i)
+		if (s2)
 		{
-			*(str + i) = *(s2 + j);
+			for (j = 0; s2[j]; ++j, ++i)
+			{
+				*(str + i) = *(s2 + j);
+			}
 		}
 
 		*(str + i) = '\0';
