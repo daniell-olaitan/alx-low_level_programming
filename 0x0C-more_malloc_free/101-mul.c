@@ -19,7 +19,6 @@ int *int_calloc(int nmemb, unsigned int size)
 		p[n] = 0;
 	return (p);
 }
-
 /**
  * mult - multiplication
  * @product: int * 4 answer
@@ -58,7 +57,6 @@ void mult(int *product, char *n1, char *n2, int len1, int len2)
 		_putchar(product[i] + '0');
 			_putchar('\n');
 }
-
 /**
  * is_valid - is the number a valid one
  * @num : char string num
@@ -75,7 +73,6 @@ int is_valid(char *num)
 	}
 	return (1);
 }
-
 /**
  * err - errors r us
  * @status: error code 4 exit
@@ -91,7 +88,6 @@ void err(int status)
 	_putchar('\n');
 	exit(status);
 }
-
 /**
  * main - getting the args
  * @argc: args #
