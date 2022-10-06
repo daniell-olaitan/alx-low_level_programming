@@ -21,16 +21,15 @@ char *string_nconcat(char s1*, char s2*, unsigned int n)
 
 	l1 = _strlen(s1);
 	l2 = _strlen(s2);
-	if (n < l1)
+	if (n < l2)
 	{
 		l2 = n;
 	}
 
 	mem_size = l1 + l2 + 1;
-	str = malloc(sizeof *str * mem_size);
+	str = malloc(sizeof(char) * mem_size);
 	if (!str)
 	{
-		free(str);
 		return (NULL);
 	}
 	else
@@ -42,5 +41,6 @@ char *string_nconcat(char s1*, char s2*, unsigned int n)
 			*(str + i) = *(s2 + j);
 	}
 
+	*(str + i) = '\0';
 	return (str);
 }
