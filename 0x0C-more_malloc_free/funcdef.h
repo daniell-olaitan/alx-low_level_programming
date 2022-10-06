@@ -11,7 +11,7 @@
  *
  * Return: pointer to mem
  */
-void *_memset(void *mem, char c, unsigned int size)
+void *_memset(char *mem, char c, unsigned int size)
 {
 	unsigned int i;
 
