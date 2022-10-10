@@ -2,6 +2,10 @@
 #define DOG_H
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+
+typedef struct dog dog_t;
 
 /**
  * struct dog - dog properties
@@ -16,5 +20,10 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *, char *, float, char *);
+void print_dog(struct dog *);
+dog_t *new_dog(char *, float, char *);
+void free_dog(dog_t *);
 
 #endif
