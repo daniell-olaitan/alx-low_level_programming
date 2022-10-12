@@ -8,7 +8,7 @@
  *
  * Return: the first index of the array where the int is found
  */
-int int_index(int *array, int size, int (cmp*)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
@@ -23,5 +23,6 @@ int int_index(int *array, int size, int (cmp*)(int))
 			}
 		}
 	}
+
 	return (-1);
 }
