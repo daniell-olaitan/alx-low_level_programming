@@ -33,7 +33,7 @@ void print_int(char *sep, va_list num)
  */
 void print_float(char *sep, va_list f)
 {
-	printf("%s%f", sep, va_arg(f, float));
+	printf("%s%f", sep, va_arg(f, double));
 }
 
 /**
