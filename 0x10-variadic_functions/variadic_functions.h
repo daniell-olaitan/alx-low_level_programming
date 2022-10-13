@@ -12,4 +12,16 @@ void print_numbers(const char *, const unsigned int, ...);
 void print_strings(const char *, const unsigned int, ...);
 void print_all(const char * const format, ...);
 
+/**
+ * struct fmt - format specifier
+ * @spec: specifier
+ * @func: pointer to the format function
+ *
+ */
+typedef struct fmt
+{
+	char spec;
+	void (*func)(char *, va_list);
+} fmt_spec;
+
 #endif
