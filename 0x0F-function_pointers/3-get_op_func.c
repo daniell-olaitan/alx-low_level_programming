@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <string.h>
 
 #define MAX_OP 5
 
@@ -20,9 +21,9 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	while (i <= MAX_OP && ops[i].op)
+	while (i < MAX_OP)
 	{
-		if (*(ops[i].op) == *s && *(ops[i].op + 1) == '\0')
+		if (strcmp(s, ops[i].op) == 0)
 		{
 			return (ops[i].f);
 		}
