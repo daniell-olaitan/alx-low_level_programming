@@ -12,23 +12,14 @@ size_t print_list(const list_t *h)
 
 	if (h)
 	{
-		const list_t *node;
-
-		node = malloc(sizeof(list_t));
-		if (node != NULL)
-		{
-			node = h;
-			for (i = 0; node; ++i)
-			{
-				if (node->str)
-					printf("[%u] %s\n", node->len, node->str);
-				else
-					printf("[0] (nil)\n");
-				node = node->next;
-			}
-
-			free(node);
-		}
+	       	for (i = 0; h; ++i)
+       		{
+			if (h->str)
+		       		printf("[%u] %s\n", h->len, h->str);
+	       		else
+       				printf("[0] (nil)\n");
+       			h = h->next;
+       		}
 	}
 
 	return (i);
