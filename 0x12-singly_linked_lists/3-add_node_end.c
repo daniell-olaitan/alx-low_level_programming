@@ -1,4 +1,4 @@
-#include "func_def.c"
+#include "func_def.h"
 
 /**
  * add_node_end - adds a node at the end of a list
@@ -29,7 +29,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 		new->str = strdup(str);
 		new->len = len - 1;
-		new-> NULL;
+		new->next =  NULL;
 
 		if (*head == NULL)
 		{
