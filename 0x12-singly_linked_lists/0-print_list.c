@@ -12,7 +12,7 @@ size_t print_list(const list_t *h)
 
 	if (h)
 	{
-		list_t *node;
+		const list_t *node;
 
 		node = malloc(sizeof(list_t));
 		if (node != NULL)
