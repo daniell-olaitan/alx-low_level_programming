@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	buff = create_buffer(argv[2]);
 	fd_file_from = open(argv[1], O_RDONLY);
-	fd_file_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, permissions);
+	fd_file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, permissions);
 	rd_cnt = read(fd_file_from, buff, 1024);
 
 	while (1)
