@@ -13,7 +13,7 @@ void close_file(int fd);
  */
 int main(int argc, char *argv[])
 {
-	char *buf;
+	char *buff;
 	mode_t permissions;
 	ssize_t rd_cnt, wr_cnt;
 	int fd_file_from, fd_file_to;
@@ -25,10 +25,10 @@ int main(int argc, char *argv[])
 	}
 
 	permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	buf = create_buffer(argv[2]);
+	buff = create_buffer(argv[2]);
 	fd_file_from = open(argv[1], O_RDONLY);
 	fd_file_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, permissions);
-	rd_cnt = read(fd_file_from, buf, 1024);
+	rd_cnt = read(fd_file_from, buff, 1024);
 
 	while (1)
 	{
@@ -36,11 +36,11 @@ int main(int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
-			free(buf);
+			free(buff);
 			exit(98);
 		}
 
-		wr_cnt = write(fd_file_to, buf, rd_cnt);
+		wr_cnt = write(fd_file_to, buff, rd_cnt);
 		if (wr_cnt == -1 || fd_file_to == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -49,13 +49,13 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		rd_cnt = read(fd_file_from, buf, 1024);
+		rd_cnt = read(fd_file_from, buff, 1024);
 		fd_file_to = open(argv[2], O_WRONLY | O_APPEND);
 		if (rd_cnt == 0)
 			break;
 	}
 
-	free(buf);
+	free(buff);
 	close_file(fd_file_from);
 	close_file(fd_file_to);
 
