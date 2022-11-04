@@ -32,5 +32,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (err || err1)
 		return (0);
 
+	close(fd);
 	return (wr_cnt);
 }
