@@ -1,44 +1,31 @@
-/*
- * File: 0-read_textfile.c
- * Auth: Totudansabo
- */
-
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * read_textfile - Reads a text file and prints it to POSIX stdout.
- * @filename: A pointer to the name of the file.
- * @letters: The number of letters the
- *           function should read and print.
+ * read_textfile - reads txtfile from disk and prints it to the stdout
+ * @filename: filename of txtfile
+ * @letters: number of chars to be read and printed
  *
- * Return: If the function fails or filename is NULL - 0.
- *         O/w - the actual number of bytes the function can read and print.
+ * Return: actual letters read and printed
+ * 0 if failed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t o, r, w;
+	int fd;
 	char *buffer;
+	int err, err1;
+	ssize_t rd_cnt, wr_cnt;
 
 	if (filename == NULL)
 		return (0);
 
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
+	fd = open(filename, O_RDONLY);
+	rd_cnt = read(fd, buffer, letters);
+	wr_cnt = write(STDOUT_FILENO, buffer, rd_cnt);
+
+	err = fd == -1 || rd_cnt == -1;
+	err1 = wr_cnt == -1 || wr_cnt != rd_cnt;
+	if (err || err1)
 		return (0);
 
-	o = open(filename, O_RDONLY);
-	r = read(o, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, r);
-
-	if (o == -1 || r == -1 || w == -1 || w != r)
-	{
-		free(buffer);
-		return (0);
-	}
-
-	free(buffer);
-	close(o);
-
-	return (w);
+	return (wr_cnt);
 }
