@@ -28,6 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	err = fd == -1 || rd_cnt == -1;
 	err1 = wr_cnt == -1 || wr_cnt != rd_cnt;
+	free(buffer);
 	if (err || err1)
 		return (0);
 
