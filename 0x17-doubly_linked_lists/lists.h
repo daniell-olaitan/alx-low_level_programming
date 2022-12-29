@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdio.h>
 
 /**
  * struct dlistint_s - doubly linked list
@@ -28,6 +29,6 @@ void free_dlistint(dlistint_t *head);
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
-int delete_dnodeint_at_index(dlistint_t **head, unsinged int index);
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
 #endif
