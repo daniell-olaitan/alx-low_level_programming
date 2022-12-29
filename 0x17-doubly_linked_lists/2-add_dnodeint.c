@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * create_node - creates a dlistint_t node
+ * create_node_ - creates a dlistint_t node
  *
  * Return: pointer to the newly created node, or NULL if unsuccessful
  */
-dlistint_t *create_node(void)
+dlistint_t *create_node_(void)
 {
 	dlistint_t *node;
 
@@ -42,7 +42,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *node;
 
-	node = create_node();
+	node = create_node_();
 	if (node == NULL)
 		return (NULL);
 
