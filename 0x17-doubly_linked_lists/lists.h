@@ -1,7 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-#include "create_node.h"
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdio.h>
