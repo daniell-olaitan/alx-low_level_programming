@@ -8,7 +8,7 @@
  *
  * Return: pointer to the new node, or NULL if unsuccessful
  */
-dlistint_t *insert_dnodeint_at_index(dlistint **h, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 0;
 	dlistint_t *node, *current = *h;
@@ -18,13 +18,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint **h, unsigned int idx, int n)
 		return (NULL);
 
 	node->n = n;
-	if (*head == NULL)
+	if (*h == NULL)
 	{
 		if (idx == 0)
 		{
 			node->prev = NULL;
 			node->next = NULL;
-			*head = node;
+			*h = node;
 
 			return (node);
 		}
@@ -38,7 +38,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint **h, unsigned int idx, int n)
 			node->prev = current->prev;
 			current->prev = node;
 			if (idx == 0)
-				*head = node;
+				*h = node;
 
 			return (node);
 		}
