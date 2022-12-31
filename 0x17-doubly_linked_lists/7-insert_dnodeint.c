@@ -35,15 +35,15 @@ dlistint_t *_create_node(void)
 /**
  * insert_node - inserts a given node at the given index
  * @h: pointer to the head of the list
- * @c: pointer to the current node in the list
- * @p: pointer to the previous node in the list
- * @n: pointer the node to be inserted
+ * @ar: aray of pointers to previous, current nodes and the node to be inserted
  * @i: index
  *
  * Return: pointer to the inserted node
  */
-dlistint_t *insert_node(dlistint_t **h, dlistint_t *c, dlistint_t *p, dlistint_t *n, unsigned int i)
+dlistint_t *insert_node(dlistint_t **h, dlistint_t *ar[], unsigned int i)
 {
+	dlistint_t *c = ar[0], *p = ar[1], *n = ar[2];
+
 	n->next = c;
 	if (c == NULL)
 	{
@@ -76,6 +76,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
 	dlistint_t *node, *current = *h, *prev = NULL;
+	dlistint_t *dlistint_list[3];
 
 	node = _create_node();
 	if (node == NULL)
@@ -94,7 +95,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		for (i = 0; current != NULL || idx == i; ++i)
 		{
 			if (idx == i)
-				return (insert_node(h, current, prev, node, i));
+			{
+				dlistint_list[0] = current;
+				dlistint_list[1] = prev;
+				dlistint_list[2] = node;
+				return (insert_node(h, dlistint_list, i));
+			}
 
 			prev = current;
 			if (current != NULL)
