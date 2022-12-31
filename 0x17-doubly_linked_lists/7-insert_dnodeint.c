@@ -42,7 +42,7 @@ dlistint_t *_create_node(void)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
-	dlistint_t *node, *current = *h;
+	dlistint_t *node, *current = *h, *prev = NULL;
 
 	node = _create_node();
 	if (node == NULL)
