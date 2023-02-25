@@ -38,7 +38,7 @@ def island_perimeter(grid):
                     perimeter += cell_size
                 if i == height-1 or grid[i+1][j] != land:
                     perimeter += cell_size
-                if j width-1 or grid[i][j+1] != land:
+                if j == width-1 or grid[i][j+1] != land:
                     perimeter += cell_size
 
     return perimeter
