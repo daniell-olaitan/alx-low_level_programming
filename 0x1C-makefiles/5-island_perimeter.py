@@ -18,4 +18,27 @@ def island_perimeter(grid):
 
     Returns: the calculated perimeter
     """
-    
+    cell_size = 1
+    perimeter = 0
+    length = 0
+    width = 0
+    land = 1
+    if grid:
+        height = len(grid) - 2
+
+    if grid and grid[0]:
+        width = len(grid[0]) - 2
+
+    for i in range(height):
+        for j in range(width):
+            if grid[i+1][j+1] == land:
+                if grid[i][j+1] != land:
+                    perimeter += cell_size
+                if grid[i+1][j] != land:
+                    perimeter += cell_size
+                if grid[i+2][j+1] != land:
+                    perimeter += cell_size
+                if grid[i+1][j+2] != land:
+                    perimeter += cell_size
+
+    return perimeter
