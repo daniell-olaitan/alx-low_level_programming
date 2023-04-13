@@ -1,6 +1,7 @@
 #include "search_algos.h"
 
 int binary_r(int *arr, size_t low, size_t high, int value);
+int binary_h(int *arr, size_t low, size_t high, int value);
 
 /**
  * advanced_binary - searches for the first value occurence using binary search
@@ -43,7 +44,7 @@ int binary_r(int *arr, size_t low, size_t high, int value)
 	mid = (high + low) / 2;
 	if (value == arr[mid])
 	{
-		if (high - low == 1)
+		if (high - low == 1 || binary_h(arr, low, mid - 1, value) == -1)
 			return (mid);
 
 		return (binary_r(arr, low, mid, value));
@@ -51,4 +52,28 @@ int binary_r(int *arr, size_t low, size_t high, int value)
 	else if (value < arr[mid])
 		return (binary_r(arr, low, mid - 1, value));
 	return (binary_r(arr, mid + 1, high, value));
+}
+
+/**
+ * binary_h - helper funtion for binary_search
+ * @arr:...
+ * @low:...
+ * @high:...
+ * @value:...
+ *
+ * Return:...
+ */
+int binary_h(int *arr, size_t low, size_t high, int value)
+{
+	size_t mid;
+
+	if (high < low)
+		return (-1);
+
+	mid = (high + low) / 2;
+	if (value == arr[mid])
+		return (mid);
+	else if (value < arr[mid])
+		return (binary_h(arr, low, mid - 1, value));
+	return (binary_h(arr, mid + 1, high, value));
 }
